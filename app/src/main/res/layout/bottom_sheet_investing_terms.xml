@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:background="@drawable/top_rounded_background"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/sheet_header"
+        style="@style/txtIntersemibold18_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:layout_marginStart="@dimen/_16pxh"
+        android:layout_marginTop="@dimen/_14pxh"
+        android:ellipsize="end"
+        android:lineSpacingExtra="@dimen/_4pxh"
+        android:singleLine="true"
+        android:text="@string/investing_in_gold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="@string/investing_in_gold" />
+
+    <TextView
+        android:id="@+id/dot1"
+        app:layout_constraintTop_toBottomOf="@+id/sheet_header"
+        app:layout_constraintStart_toStartOf="@+id/sheet_header"
+        style="@style/txtIntersemibold18_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_12pxh"
+        android:layout_marginTop="@dimen/_14pxh"
+        android:text="•"
+        tools:text="•" />
+    <TextView
+        app:layout_constraintStart_toEndOf="@+id/dot1"
+        app:layout_constraintTop_toTopOf="@+id/dot1"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/you_can_buy_term"
+        style="@style/txtInterregular14_3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10pxh"
+        android:layout_marginEnd="@dimen/_16pxh"
+        android:gravity="start"
+        android:lineSpacingExtra="@dimen/_6pxh"
+        android:text="@string/you_can_buy"
+        tools:text="@string/you_can_buy" />
+
+    <TextView
+        android:id="@+id/dot2"
+        app:layout_constraintTop_toBottomOf="@+id/you_can_buy_term"
+        app:layout_constraintStart_toStartOf="@+id/dot1"
+        style="@style/txtIntersemibold18_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_14pxh"
+        android:text="•"
+        tools:text="•" />
+
+    <TextView
+        app:layout_constraintStart_toStartOf="@+id/you_can_buy_term"
+        app:layout_constraintTop_toTopOf="@+id/dot2"
+        app:layout_constraintEnd_toEndOf="@+id/you_can_buy_term"
+        android:id="@+id/gold_price_term"
+        style="@style/txtInterregular14_3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:lineSpacingExtra="@dimen/_6pxh"
+        android:text="@string/gold_price_term"
+        tools:text="@string/gold_price_term" />
+
+    <TextView
+        android:id="@+id/dot3"
+        app:layout_constraintTop_toBottomOf="@+id/gold_price_term"
+        app:layout_constraintStart_toStartOf="@+id/dot1"
+        style="@style/txtIntersemibold18_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_14pxh"
+        android:text="•"
+        tools:text="•" />
+
+    <TextView
+        app:layout_constraintStart_toStartOf="@+id/you_can_buy_term"
+        app:layout_constraintTop_toTopOf="@+id/dot3"
+        app:layout_constraintEnd_toEndOf="@+id/you_can_buy_term"
+        android:id="@+id/balance_term"
+        style="@style/txtInterregular14_3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:lineSpacingExtra="@dimen/_6pxh"
+        android:text="@string/balance_term"
+        tools:text="@string/balance_term" />
+
+
+    <TextView
+        android:id="@+id/dot4"
+        app:layout_constraintTop_toBottomOf="@+id/balance_term"
+        app:layout_constraintStart_toStartOf="@+id/dot1"
+        style="@style/txtIntersemibold18_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_14pxh"
+        android:text="•"
+        tools:text="•" />
+
+    <TextView
+        app:layout_constraintStart_toStartOf="@+id/you_can_buy_term"
+        app:layout_constraintTop_toTopOf="@+id/dot4"
+        app:layout_constraintEnd_toEndOf="@+id/you_can_buy_term"
+        android:id="@+id/receiving_term"
+        style="@style/txtInterregular14_3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:lineSpacingExtra="@dimen/_6pxh"
+        android:text="@string/receiving_term"
+        tools:text="@string/receiving_term" />
+
+    <TextView
+        android:id="@+id/dot5"
+        app:layout_constraintTop_toBottomOf="@+id/receiving_term"
+        app:layout_constraintStart_toStartOf="@+id/dot1"
+        style="@style/txtIntersemibold18_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_14pxh"
+        android:text="•"
+        tools:text="•" />
+
+    <TextView
+        app:layout_constraintStart_toStartOf="@+id/you_can_buy_term"
+        app:layout_constraintTop_toTopOf="@+id/dot5"
+        app:layout_constraintEnd_toEndOf="@+id/you_can_buy_term"
+        android:id="@+id/security_term"
+        style="@style/txtInterregular14_3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:lineSpacingExtra="@dimen/_6pxh"
+        android:text="@string/security_term"
+        tools:text="@string/security_term" />
+
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        app:layout_constraintTop_toBottomOf="@+id/security_term"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/dot1"
+        app:layout_constraintEnd_toEndOf="@id/balance_term"
+        android:id="@+id/btn_understand"
+        style="@style/btnSolidRounded_1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_24pxh"
+        android:layout_marginBottom="@dimen/_24pxh"
+        android:gravity="center"
+        android:text="@string/lbl_i_understand"
+        tools:text="@string/lbl_i_understand"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

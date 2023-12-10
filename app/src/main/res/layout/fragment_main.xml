@@ -1,17 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:tools="http://schemas.android.com/tools">
+    android:layout_height="match_parent">
 
-    <!-- add text in string files
-    adjust text style
-    adjust margins and paddings values-->
 
     <androidx.cardview.widget.CardView
         android:id="@+id/portfolio"
-        android:layout_width= "match_parent"
+        android:layout_width="match_parent"
         android:layout_height="122dp"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
@@ -20,7 +17,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
-
+        <!--
+           adjust text style
+           adjust margins and paddings values-->
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
@@ -31,7 +30,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="16dp"
                 android:layout_marginVertical="16dp"
-                android:text="Portfolio Value"
+                android:text="@string/portfolio_title"
                 android:textAlignment="viewStart"
                 android:textColor="#66708599"
                 app:layout_constraintStart_toStartOf="parent"
@@ -55,8 +54,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="16dp"
                 android:layout_marginVertical="16dp"
-                android:text="Grams"
-                android:textAlignment="viewStart"
+                android:text="@string/grams_title"
                 android:textColor="#66708599"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/portfolioValue" />
@@ -66,9 +64,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="16dp"
-                android:layout_marginVertical="4dp"
-                android:textAlignment="viewStart"
                 android:textColor="#5A5858"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/gramsTitle"
                 tools:text="0 Grams" />
@@ -86,23 +83,22 @@
                 android:id="@+id/pLTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="16dp"
                 android:layout_marginVertical="16dp"
-                android:text="P/L"
-                android:textAlignment="viewStart"
+                android:text="@string/pl_title"
                 android:textColor="#66708599"
-                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintEnd_toEndOf="parent
+"
+                app:layout_constraintStart_toEndOf="@+id/verticalLine"
                 app:layout_constraintTop_toBottomOf="@id/portfolioValue" />
 
             <TextView
                 android:id="@+id/pLValue"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="16dp"
                 android:layout_marginVertical="4dp"
-                android:textAlignment="viewStart"
                 android:textColor="#5A5858"
-                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@id/pLTitle"
                 app:layout_constraintTop_toBottomOf="@id/pLTitle"
                 tools:text="0.00 EGP" />
 
@@ -110,4 +106,24 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.cardview.widget.CardView>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/portfolio"
+        app:tabTextColor="#3F3F3F"
+        app:tabGravity="fill"/>
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="12dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tabLayout" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

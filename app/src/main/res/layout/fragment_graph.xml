@@ -18,22 +18,16 @@
                 android:id="@+id/tabLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
-            <!--            <androidx.viewpager2.widget.ViewPager2-->
-            <!--                android:id="@+id/viewPager"-->
-            <!--                android:layout_width="match_parent"-->
-            <!--                android:layout_height="400dp"-->
-            <!--                android:layout_marginVertical="12dp"-->
-            <!--                app:layout_constraintEnd_toEndOf="parent"-->
-            <!--                app:layout_constraintStart_toStartOf="parent"-->
-            <!--                app:layout_constraintTop_toBottomOf="@id/tabLayout" />-->
 
             <TextView
                 android:id="@+id/todayValue"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tabLayout"
@@ -43,6 +37,7 @@
                 android:id="@+id/changeValue"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginEnd="4dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/todayValue"
                 tools:text="+2.92EGP" />
@@ -68,7 +63,7 @@
                 android:id="@+id/xAxisValue"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="4dp"
+                android:layout_marginStart="8dp"
                 app:layout_constraintStart_toEndOf="@id/changePercentage"
                 app:layout_constraintTop_toTopOf="@id/changeValue"
                 tools:text="Today" />

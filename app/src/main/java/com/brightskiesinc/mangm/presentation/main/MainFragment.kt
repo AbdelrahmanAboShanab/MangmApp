@@ -20,7 +20,7 @@ class MainFragment : BaseFragment<FragmentMainBinding>() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    )=getView(FragmentMainBinding.inflate(inflater,container,false))
+    ) = getView(FragmentMainBinding.inflate(inflater, container, false))
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -28,20 +28,23 @@ class MainFragment : BaseFragment<FragmentMainBinding>() {
         setupViewPager()
     }
 
-    private fun setupViewPager(){
+    private fun setupViewPager() {
 
         val viewPager: ViewPager2 = binding.viewPager
 
         val graphFragment = GraphFragment()
         val historyGraph = HistoryFragment()
-        val tabTitles = arrayOf(context?.getString(R.string.graph_tab), context?.getString(R.string.history_tab))
+        val tabTitles = arrayOf(
+            context?.getString(R.string.graph_tab),
+            context?.getString(R.string.history_tab)
+        )
 
-        val adapter = ViewPagerAdapter(childFragmentManager, lifecycle,tabTitles)
+        val adapter = ViewPagerAdapter(childFragmentManager, lifecycle, tabTitles)
         adapter.addFragment(graphFragment)
         adapter.addFragment(historyGraph)
 
         viewPager.adapter = adapter
-
+//        viewPager.isUserInputEnabled = false     //to disable swipe behavior
         val tabLayout: TabLayout = binding.tabLayout
         TabLayoutMediator(tabLayout, viewPager) { tab, position ->
             tab.text = (viewPager.adapter as ViewPagerAdapter).getTabTitle(position)

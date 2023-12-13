@@ -3,7 +3,16 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
-    <color name="mangm_orange">#FE7805</color>
+    <color name="lightGray">#66908585</color>
+    <color name="darkGray">#5A5858</color>
+    <color name="disabledTabText">#858585</color>
+    <color name="disabledTabBackground">#F8F8F8</color>
+    <color name="disabledButtonText">#939393</color>
+    <color name="disabledButtonBackground">#E9E9E9</color>
+    <color name="greenArrow">#18A66B</color>
+    <color name="orangeMangm">#FE7805</color>
+    <color name="dashLine">#E4E7EC</color>
+    <color name="selectedTab">#3F3F3F</color>
 
     <color name="purple_200">#FFBB86FC</color>
     <color name="purple_500">#FF6200EE</color>

@@ -7,5 +7,11 @@
             <corners android:radius="10dp" />
         </shape>
     </item>
+    <item android:state_selected="false">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/disabledTabBackground" />
+            <corners android:radius="10dp" />
+        </shape>
+    </item>
 
 </selector>

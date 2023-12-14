@@ -1,6 +1,7 @@
 plugins {
     id("com.android.application")
-    id("org.jetbrains.kotlin.android")
+    id("kotlin-android")
+    id("kotlin-kapt")
 }
 
 android {
@@ -47,11 +48,17 @@ dependencies {
     implementation ("androidx.lifecycle:lifecycle-viewmodel:$lifecycle_version")
     implementation ("androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version")
     implementation("com.google.android.material:material:1.10.0")
-
+    implementation("androidx.lifecycle:lifecycle-extensions:2.2.0")
 
     val nav_version = "2.7.5"
     // Kotlin
     implementation("androidx.navigation:navigation-fragment-ktx:$nav_version")
     implementation("androidx.navigation:navigation-ui-ktx:$nav_version")
+
+    // dagger 2
+    val daggerVersion = "2.49"
+    implementation("com.google.dagger:dagger-android:$daggerVersion")
+    kapt ("com.google.dagger:dagger-compiler:$daggerVersion")
+    kapt ("com.google.dagger:dagger-android-processor:$daggerVersion")
 
 }

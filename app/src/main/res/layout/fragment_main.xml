@@ -41,6 +41,7 @@
                 android:layout_marginTop="12dp"
                 android:textAlignment="viewStart"
                 android:textColor="@color/darkGray"
+                android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/portfolioTitle"
                 tools:text="0.00 EGP" />
@@ -71,19 +72,19 @@
                 android:layout_width="2dp"
                 android:layout_height="38dp"
                 android:background="@color/dashLine"
-                app:layout_constraintEnd_toStartOf="@id/pLTitle"
-                app:layout_constraintStart_toEndOf="@id/gramsTitle"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/gramsTitle"
                 app:layout_constraintTop_toTopOf="@id/gramsTitle" />
 
             <TextView
                 android:id="@+id/pLTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
                 android:text="@string/pl_title"
                 android:textColor="@color/lightGray"
-                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/verticalLine"
-                app:layout_constraintTop_toTopOf="@id/gramsTitle" />
+                app:layout_constraintTop_toTopOf="@+id/verticalLine" />
 
             <TextView
                 android:id="@+id/pLValue"
@@ -100,10 +101,9 @@
                 android:id="@+id/viewMoreIcon"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
+                android:layout_marginEnd="46dp"
                 android:src="@drawable/view_more"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@id/pLTitle"
+                app:layout_constraintStart_toEndOf="@+id/pLValue"
                 app:layout_constraintTop_toBottomOf="@id/pLTitle" />
 
 

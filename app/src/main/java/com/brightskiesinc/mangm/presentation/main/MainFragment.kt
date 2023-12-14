@@ -44,7 +44,7 @@ class MainFragment : BaseFragment<FragmentMainBinding>() {
         adapter.addFragment(historyGraph)
 
         viewPager.adapter = adapter
-//        viewPager.isUserInputEnabled = false     //to disable swipe behavior
+        viewPager.isUserInputEnabled = false     //to disable swipe behavior
         val tabLayout: TabLayout = binding.tabLayout
         TabLayoutMediator(tabLayout, viewPager) { tab, position ->
             tab.text = (viewPager.adapter as ViewPagerAdapter).getTabTitle(position)

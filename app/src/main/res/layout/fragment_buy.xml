@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+
+    <include
+        android:id="@+id/background"
+        layout="@layout/balance_section"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginHorizontal="@dimen/margin_medium"
+        android:layout_marginTop="@dimen/margin_large"/>
+
+    <TextView
+        app:layout_constraintStart_toStartOf="@+id/background"
+        app:layout_constraintEnd_toEndOf="@id/background"
+        app:layout_constraintTop_toBottomOf="@+id/background"
+        android:id="@+id/txtWeight"
+        android:gravity="start"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_24pxh"
+        android:layout_width="0dp"
+        android:text="@string/msg_you_can_buy_gold"
+        style="@style/txtInterregular16_1"
+        tools:text="@string/msg_you_can_buy_gold"
+        />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/gramPriceSection"
+        app:layout_constraintTop_toBottomOf="@+id/txtWeight"
+        app:layout_constraintStart_toStartOf="@id/background"
+        app:layout_constraintEnd_toEndOf="@id/background"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/orange_card_background"
+        android:padding="@dimen/_16pxh"
+        android:layout_marginTop="@dimen/_24pxh"
+        >
+
+        <ImageView
+            android:id="@+id/coin"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_height="@dimen/_20pxh"
+            android:layout_width="@dimen/_20pxh"
+            android:scaleType="fitXY"
+            android:src="@drawable/img_coin"
+            tools:src="@drawable/img_coin"/>
+
+        <TextView
+            android:id="@+id/gramPrice"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@+id/coin"
+            app:layout_constraintTop_toTopOf="@+id/coin"
+            app:layout_constraintBottom_toBottomOf="@+id/coin"
+            android:layout_marginStart="@dimen/_8pxh"
+            android:layout_width="wrap_content"
+            android:lineSpacingExtra="@dimen/_3pxh"
+            android:text="@string/msg_1_gram_2_966"
+            style="@style/txtIntermedium14_3"
+            tools:text="@string/msg_1_gram_2_966"/>
+
+        <TextView
+            android:gravity="start"
+            android:id="@+id/maxPrice"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_6pxh"
+            android:layout_width="0dp"
+            app:layout_constraintTop_toBottomOf="@+id/gramPrice"
+            app:layout_constraintStart_toStartOf="@+id/coin"
+            android:text="@string/msg_the_maximum_amount"
+            style="@style/txtInterregular14_5"
+            tools:text="@string/msg_the_maximum_amount"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_gram_price_section"
+        app:layout_constraintTop_toBottomOf="@+id/gramPriceSection"
+        app:layout_constraintStart_toStartOf="@+id/background"
+        app:layout_constraintEnd_toEndOf="@+id/background"
+        android:layout_marginTop="@dimen/_24pxh"
+        android:padding="@dimen/margin_medium"
+        >
+        <TextView
+            android:ellipsize="end"
+            android:id="@+id/txtGram"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginVertical="@dimen/margin_medium"
+            android:layout_marginStart="@dimen/_6pxh"
+            android:layout_width="wrap_content"
+            android:lineSpacingExtra="@dimen/_4pxh"
+            android:text="@string/lbl_gram"
+            style="@style/txtIntermedium16"
+            tools:text="@string/lbl_gram"/>
+        <View
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtGram"
+            android:background="@drawable/line"
+            android:id="@+id/line"
+            android:layout_height="@dimen/_1pxh"
+            android:layout_marginTop="@dimen/_24pxh"
+            android:layout_width="0dp"/>
+
+        <TextView
+            android:id="@+id/txtPriceFour"
+            app:layout_constraintTop_toBottomOf="@+id/line"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/txtGram"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:singleLine="true"
+            android:text="@string/lbl_egp"
+            style="@style/txtIntermedium16"
+            tools:text="@string/lbl_egp"
+            android:layout_marginTop="@dimen/margin_large"
+            android:layout_marginBottom="@dimen/margin_small"/>
+
+        <TextView
+            android:id="@+id/txtPriceFive"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            app:layout_constraintBaseline_toBaselineOf="@+id/txtPriceFour"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="@dimen/_16pxh"
+            android:text="539.396 EGP"
+            style="@style/txtBarlowsemibold16_1"
+            tools:text="539.396 EGP"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

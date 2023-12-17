@@ -2,7 +2,6 @@ package com.brightskiesinc.mangm.presentation.homescreen
 
 import android.annotation.SuppressLint
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -55,8 +54,6 @@ class GraphFragment : BaseFragment<FragmentGraphBinding>() {
 //            }
 //        }
 //    }
-    private val dataForTab1 = "Data for Tab 1"
-    private val dataForTab2 = "Data for Tab 2"
     private val dataForTab3 = "Data for Tab 3"
     private fun setUpTabs() {
 
@@ -130,7 +127,9 @@ class GraphFragment : BaseFragment<FragmentGraphBinding>() {
         val avg = floatList.average().toFloat()
 
         lineChart.apply {
+            binding.todayValue.text= entryList.last().y.toString()
             axisLeft.removeAllLimitLines()
+            highlightValues(null)
             applyDefaultStyle(min = min, avg = avg, max = max)
             setOnChartValueSelectedListener(BarChartOnChartValueSelectedListener())
         }
@@ -146,7 +145,6 @@ class GraphFragment : BaseFragment<FragmentGraphBinding>() {
 
     inner class BarChartOnChartValueSelectedListener : OnChartValueSelectedListener {
         override fun onValueSelected(e: Entry?, h: Highlight?) {
-            Log.d("onValueSelected", e?.x.toString() + " y:" + e?.y.toString())
             binding.todayValue.text = e?.y.toString()
 //            binding.xAxisValue.text=e?.x.toString() //instead of "today" assuming we get the dates in x axis
         }

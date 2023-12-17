@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <include
+        android:id="@+id/background"
+        layout="@layout/balance_section"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginHorizontal="@dimen/margin_medium"
+        android:layout_marginTop="@dimen/margin_large"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/summarySection"
+        app:layout_constraintStart_toStartOf="@+id/background"
+        app:layout_constraintEnd_toEndOf="@+id/background"
+        app:layout_constraintTop_toBottomOf="@+id/background"
+        android:layout_marginTop="@dimen/margin_large"
+        android:background="@drawable/dashed_background_without_bottom"
+        android:paddingBottom="@dimen/margin_medium"
+        >
+
+    <TextView
+        android:id="@+id/lblGrams"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        style="@style/txtIntermedium14_4"
+        tools:text="@string/lbl_grams"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:text="@string/lbl_grams"
+        android:layout_marginStart="@dimen/margin_medium"
+        android:layout_marginTop="@dimen/margin_medium"/>
+
+    <TextView
+        android:id="@+id/grams"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBaseline_toBaselineOf="@+id/lblGrams"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:text="0.2 Gram"
+        style="@style/txtIntermedium14"
+        tools:text="0.2 Gram"
+        android:layout_marginEnd="@dimen/margin_medium"/>
+
+        <View
+            app:layout_constraintTop_toBottomOf="@+id/lblGrams"
+            app:layout_constraintStart_toStartOf="@+id/lblGrams"
+            app:layout_constraintEnd_toEndOf="@+id/grams"
+            android:background="@color/gray_100"
+            android:id="@+id/line1"
+            android:layout_height="@dimen/_1pxh"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:layout_width="@dimen/_350pxh"
+            />
+
+        <TextView
+            android:id="@+id/lblNetPrice"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            app:layout_constraintStart_toStartOf="@+id/lblGrams"
+            app:layout_constraintTop_toBottomOf="@+id/line1"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="@string/lbl_net_price"
+            style="@style/txtIntermedium14_4"
+            tools:text="@string/lbl_net_price"/>
+
+        <TextView
+            android:id="@+id/price"
+            app:layout_constraintBaseline_toBaselineOf="@+id/lblNetPrice"
+            app:layout_constraintEnd_toEndOf="@+id/grams"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:text="306.20 EGP"
+            style="@style/txtIntermedium14"
+            tools:text="306.20 EGP"/>
+        <View
+            app:layout_constraintTop_toBottomOf="@+id/lblNetPrice"
+            app:layout_constraintStart_toStartOf="@+id/lblNetPrice"
+            app:layout_constraintEnd_toEndOf="@+id/price"
+            android:background="@color/gray_100"
+            android:id="@+id/line2"
+            android:layout_height="@dimen/_1pxh"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:layout_width="@dimen/_350pxh"/>
+
+
+        <TextView
+            android:id="@+id/lblEstimatedFees"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            app:layout_constraintStart_toStartOf="@+id/lblGrams"
+            app:layout_constraintTop_toBottomOf="@+id/line2"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:singleLine="true"
+            android:text="@string/lbl_estimated_fees"
+            style="@style/txtIntermedium14_4"
+            tools:text="@string/lbl_estimated_fees"/>
+
+        <TextView
+            android:id="@+id/estimatedFees"
+            app:layout_constraintBaseline_toBaselineOf="@+id/lblEstimatedFees"
+            app:layout_constraintEnd_toEndOf="@+id/grams"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:text="306.20 EGP"
+            style="@style/txtIntermedium14"
+            tools:text="306.20 EGP"/>
+
+        <View
+            app:layout_constraintTop_toBottomOf="@+id/lblEstimatedFees"
+            app:layout_constraintStart_toStartOf="@+id/lblEstimatedFees"
+            app:layout_constraintEnd_toEndOf="@+id/estimatedFees"
+            android:background="@color/gray_100"
+            android:id="@+id/line3"
+            android:layout_height="@dimen/_1pxh"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:layout_width="@dimen/_350pxh"/>
+
+        <TextView
+            android:id="@+id/lblExecutionPrice"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            app:layout_constraintStart_toStartOf="@+id/lblGrams"
+            app:layout_constraintTop_toBottomOf="@+id/line3"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:singleLine="true"
+            android:text="@string/lbl_execution_price"
+            style="@style/txtIntermedium14_4"
+            tools:text="@string/lbl_execution_price"/>
+
+        <TextView
+            android:id="@+id/executionPrice"
+            app:layout_constraintBaseline_toBaselineOf="@+id/lblExecutionPrice"
+            app:layout_constraintEnd_toEndOf="@+id/grams"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:text="2,966.5 EGP"
+            style="@style/txtIntermedium14"
+            tools:text="306.20 EGP"/>
+
+        <View
+            app:layout_constraintTop_toBottomOf="@+id/lblExecutionPrice"
+            app:layout_constraintStart_toStartOf="@+id/lblExecutionPrice"
+            app:layout_constraintEnd_toEndOf="@+id/estimatedFees"
+            android:background="@color/gray_100"
+            android:id="@+id/line4"
+            android:layout_height="@dimen/_1pxh"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:layout_width="@dimen/_350pxh"/>
+
+        <TextView
+            android:id="@+id/lblTotalAmount"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            app:layout_constraintStart_toStartOf="@+id/lblGrams"
+            app:layout_constraintTop_toBottomOf="@+id/line4"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:singleLine="true"
+            android:text="@string/lbl_total_amount"
+            style="@style/txtIntermedium14_4"
+            tools:text="@string/lbl_total_amount"/>
+
+        <TextView
+            android:id="@+id/totalAmount"
+            app:layout_constraintBaseline_toBaselineOf="@+id/lblTotalAmount"
+            app:layout_constraintEnd_toEndOf="@+id/grams"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:text="2,966.5 EGP"
+            style="@style/txtIntermedium14"
+            tools:text="540 EGP"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:layout_width="@dimen/_12pxh"
+        android:layout_height="@dimen/_20pxh"
+        android:src="@drawable/left_half_circle"
+        app:layout_constraintTop_toTopOf="@+id/test"
+        app:layout_constraintBottom_toTopOf="@+id/test"
+        app:layout_constraintStart_toStartOf="@+id/test"
+        android:elevation="@dimen/margin_medium"
+        />
+
+    <ImageView
+        android:layout_width="@dimen/_12pxh"
+        android:layout_height="@dimen/_20pxh"
+        android:src="@drawable/right_half_circle"
+        app:layout_constraintTop_toTopOf="@+id/test"
+        app:layout_constraintBottom_toTopOf="@+id/test"
+        app:layout_constraintEnd_toEndOf="@+id/test"
+        android:elevation="@dimen/margin_medium"
+        />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/test"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@+id/summarySection"
+        app:layout_constraintEnd_toEndOf="@+id/summarySection"
+        app:layout_constraintTop_toBottomOf="@+id/summarySection"
+        android:background="@drawable/dashed_background"
+        android:padding="@dimen/margin_medium"
+        >
+        <ImageView
+            android:id="@+id/imageGroupEighteen"
+            android:layout_height="@dimen/_20pxh"
+            android:layout_width="@dimen/_20pxh"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:scaleType="fitXY"
+            android:src="@drawable/img_coin"
+            tools:ignore="ContentDescription"
+            tools:src="@drawable/img_coin"
+            />
+        <TextView
+            android:id="@+id/txtDescription"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@+id/imageGroupEighteen"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginStart="@dimen/margin_medium"
+            android:layout_width="0dp"
+            android:lineSpacingExtra="@dimen/_6pxh"
+            android:text="@string/msg_price_variation"
+            style="@style/txtInterregular14_6"
+            tools:text="@string/msg_price_variation"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>

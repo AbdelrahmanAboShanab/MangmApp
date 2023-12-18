@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">MangmApp</string>
 
+    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="ok">OK</string>
 
 
@@ -13,5 +14,16 @@
     <string name="sell">Sell</string>
     <string name="buy">Buy</string>
 
+
+
+
+    // Investing in Gold bottom sheet
+    <string name="investing_in_gold">Investing in Gold</string>
+    <string name="you_can_buy">You can buy and sell gold at any time from as minimum as 0.1 gram</string>
+    <string name="gold_price_term">Gold price goes up and down, so you can follow up the prices from the graph</string>
+    <string name="balance_term">The money will be deducted from your balance if you buy gold &amp; will be added to your balance if you sell it </string>
+    <string name="receiving_term">You won\u2019t be able to physically receive your invested gold unless it\u2019s 8 grams</string>
+    <string name="security_term">Your invested gold will be securely stored by our partner <b>\u201cMngm\u201d</b></string>
+    <string name="lbl_i_understand">I Understand</string>
 
 </resources>

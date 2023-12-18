@@ -1,0 +1,9 @@
+<inset xmlns:android="http://schemas.android.com/apk/res/android"
+    android:insetBottom="-4dp">
+<shape android:shape="rectangle">
+    <solid android:color="@color/white_A700"/>
+    <corners android:radius="@dimen/_6pxh"/>
+    <stroke android:color="@color/gray_300"
+        android:dashGap="@dimen/_6pxh" android:dashWidth="@dimen/_6pxh" android:width="@dimen/_1pxh"/>
+</shape>
+</inset>

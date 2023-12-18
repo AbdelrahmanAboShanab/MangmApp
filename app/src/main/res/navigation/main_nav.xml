@@ -14,5 +14,9 @@
         android:id="@+id/investingTermsBottomSheet"
         android:name="com.brightskiesinc.mangm.presentation.investingterms.InvestingTermsBottomSheet"
         android:label="" />
+    <fragment
+        android:id="@+id/buyFragment"
+        android:name="com.brightskiesinc.mangm.presentation.buygold.BuyFragment"
+        android:label="BuyFragment" />
 
 </navigation>

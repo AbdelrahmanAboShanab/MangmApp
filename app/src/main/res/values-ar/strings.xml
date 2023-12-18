@@ -24,5 +24,18 @@
     <string name="receiving_term">You won\u2019t be able to physically receive your invested gold unless it\u2019s 8 grams</string>
     <string name="security_term">Your invested gold will be securely stored by our partner \u201cMngm\u201d</string>
     <string name="lbl_i_understand">I Understand</string>
+    <string name="limit_price">Max EGP 100,000 </string>
+    <string name="msg_you_can_buy_gold">You can buy gold from as minimum as 0.1 gram</string>
+    <string name="msg_1_gram_2_966">1 Gram = 2,966.98 EGP</string>
+    <string name="msg_the_maximum_amount">The maximum amount to buy gold is 50,000 EGP per day</string>
+    <string name="lbl_gram">Gram</string>
+    <string name="lbl_balance">Balance</string>
+    <string name="lbl_egp">EGP</string>
+    <string name="lbl_grams">Grams</string>
+    <string name="lbl_net_price">Net Price</string>
+    <string name="lbl_estimated_fees">Estimated Fees</string>
+    <string name="lbl_execution_price">Execution Price</string>
+    <string name="lbl_total_amount">Total Amount</string>
+    <string name="msg_price_variation">Your balance will be deducted after you submit, There might be a slight variation from the price shown above if the gold price goes up at this moment</string>
 
 </resources>

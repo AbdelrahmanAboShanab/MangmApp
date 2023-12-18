@@ -61,4 +61,7 @@ dependencies {
     kapt ("com.google.dagger:dagger-compiler:$daggerVersion")
     kapt ("com.google.dagger:dagger-android-processor:$daggerVersion")
 
+
+    //MPCharts
+    implementation ("com.github.PhilJay:MPAndroidChart:v3.1.0")
 }

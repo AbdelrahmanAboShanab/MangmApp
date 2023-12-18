@@ -3,7 +3,7 @@
     <style name="Theme.MangmApp" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your light theme here. -->
         <item name="colorPrimary">@color/white</item>
-        <item name="colorPrimaryVariant">@color/amber_900</item>
+        <item name="colorPrimaryVariant">@color/orangeMangm</item>
         <item name="colorOnPrimary">@color/white</item>
 
     </style>

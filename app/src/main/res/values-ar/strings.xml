@@ -6,6 +6,16 @@
     <string name="ok">موافق</string>
 
 
+    <!-- Home Screen -->
+    <string name="portfolio_title">Portfolio Value</string>
+    <string name="grams_title">Grams</string>
+    <string name="pl_title">P/L</string>
+    <string name="graph_tab">Overview</string>
+    <string name="history_tab">History</string>
+    <string name="sell">Sell</string>
+    <string name="buy">Buy</string>
+
+
     // Investing in Gold bottom sheet
     <string name="investing_in_gold">Investing in Gold</string>
     <string name="you_can_buy">You can buy and sell gold at any time from as minimum as 0.1 gram</string>

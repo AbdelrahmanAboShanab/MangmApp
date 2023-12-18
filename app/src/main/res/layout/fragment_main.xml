@@ -1,13 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    >
+    android:paddingStart="16dp"
+    android:paddingEnd="16dp"
+    android:paddingBottom="20dp">
 
-    <TextView
+    <include
+        layout="@layout/component_portfolio"
+        android:id="@+id/portfolio"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content"/>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="16dp"
+        android:elevation="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/portfolio"
+        app:tabBackground="@drawable/tab_indicator"
+        app:tabGravity="fill"
+        app:tabIndicator="@null"
+        app:tabSelectedTextColor="@color/selectedTab"
+        app:tabTextColor="@color/disabledTabText" />
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:paddingHorizontal="12dp"
+        android:paddingVertical="24dp"
+        app:layout_constraintBottom_toTopOf="@+id/buy_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tabLayout"
+        />
+
+    <Button
+        android:id="@+id/sell_button"
+        android:layout_width="172dp"
+        android:layout_height="44dp"
+        android:background="@drawable/rounded_corners"
+        android:backgroundTint="@color/disabledButtonBackground"
+        android:text="@string/sell"
+        android:textAllCaps="false"
+        android:textColor="@color/disabledButtonText"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/buy_button"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/buy_button"
+        android:layout_width="172dp"
+        android:layout_height="44dp"
+        android:background="@drawable/rounded_corners"
+        android:backgroundTint="@color/orangeMangm"
+        android:text="@string/buy"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/sell_button"
+
+        />
 
 
-</FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

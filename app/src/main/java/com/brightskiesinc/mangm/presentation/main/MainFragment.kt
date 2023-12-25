@@ -1,6 +1,8 @@
 package com.brightskiesinc.mangm.presentation.main
 
+import android.content.res.Resources
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -10,20 +12,24 @@ import com.brightskiesinc.mangm.presentation.homescreen.GraphFragment
 import com.brightskiesinc.mangm.presentation.homescreen.HistoryFragment
 import com.brightskiesinc.mangm.presentation.homescreen.ViewPagerAdapter
 import com.brightskiesinc.mangmapp.R
-import com.brightskiesinc.mangmapp.databinding.FragmentMainBinding
+import com.brightskiesinc.mangmapp.databinding.FragmentMangmMainBinding
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
+import java.util.Locale
 
 
-class MainFragment : BaseFragment<FragmentMainBinding>() {
+class MainFragment : BaseFragment<FragmentMangmMainBinding>() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ) = getView(FragmentMainBinding.inflate(inflater, container, false))
+    ) = getView(FragmentMangmMainBinding.inflate(inflater, container, false))
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        Log.i("TAG", "onViewCreated:testtttt1 ${Resources.getSystem().getConfiguration().locale.getLanguage()}")
+        Log.i("TAG", "onViewCreated:testtttt2 ${Locale.getDefault().language}")
 
         setupViewPager()
     }

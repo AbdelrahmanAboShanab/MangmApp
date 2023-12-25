@@ -5,11 +5,11 @@ import android.os.Bundle
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import com.brightskiesinc.mangmapp.R
-import com.brightskiesinc.mangmapp.databinding.ActivityMainBinding
+import com.brightskiesinc.mangmapp.databinding.ActivityMangmMainBinding
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityMainBinding
+    private lateinit var binding: ActivityMangmMainBinding
 
     private lateinit var mController: NavController
 
@@ -17,16 +17,17 @@ class MainActivity : AppCompatActivity() {
     private val mNavListener =
         NavController.OnDestinationChangedListener { controller, destination, _ ->
             if (destination.label != null) {
-                binding.toolbar.title = destination.label
+              //  binding.toolbar.title = destination.label
             }
 
         }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityMainBinding.inflate(layoutInflater)
+        binding = ActivityMangmMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         setupNavController()
+        binding.root.isActivated
         setSupportActionBar(binding.toolbar)
 
     }

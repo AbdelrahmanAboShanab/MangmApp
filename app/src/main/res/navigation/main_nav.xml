@@ -9,7 +9,7 @@
         android:id="@+id/mainFragment"
         android:name="com.brightskiesinc.mangm.presentation.main.MainFragment"
         android:label="Gold"
-        tools:layout="@layout/fragment_main" />
+        tools:layout="@layout/fragment_mangm_main" />
     <dialog
         android:id="@+id/investingTermsBottomSheet"
         android:name="com.brightskiesinc.mangm.presentation.investingterms.InvestingTermsBottomSheet"
